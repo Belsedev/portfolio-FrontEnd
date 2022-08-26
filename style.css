@@ -7,30 +7,26 @@ body {
 
 
 img {
-    max-height: 280px; 
-    width: 1015px;
+    width: 100%;
+    
 }
+.centrado {
+    border-radius: 0px 0px 10px 10px; 
+}
+
+
 
 .style_redes {
     padding-left: 5px;
     display: flex;
     gap: 5px;
 }
-
-.centrado {
-    border-radius: 0px 0px 10px 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .redes{
     border-radius: 5px;
     width: 40px;
     height: 40px;
     background-size: cover; 
 }
-
 .button{
     margin-top: 5px;
     background-color: #4CAF50;
@@ -45,14 +41,12 @@ img {
     cursor: pointer;
     margin-right: 5px;
 }
-
 .button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
-  
   .button span:after {
     content: '\00bb';
     position: absolute;
@@ -61,58 +55,53 @@ img {
     right: -5px;
     transition: 0.5s;
   }
-  
   .button:hover span {
     padding-right: 15px;
   }
-  
   .button:hover span:after {
     opacity: 1;
     right: 0;
   }
 
-section, nav, footer {
+
+
+section, nav, footer, header {
     background-color: #fcfaf9;
     border-radius: 10px;
-    display: block;
     margin-left: auto;
     margin-right: auto; 
     max-width: 1015px;
-    
-    
 }
 
-.circle {
+
+
+.circle_img {
     top: -75px;
     position: relative;
-    margin-left: 50px;
+    margin-left: 25px;
     width: 150px;
     height: 150px;
     background-image: url(./Img/Rei.jpg);
     background-size: cover;
     border-radius: 50%;
 }
-
-#nombre{
+#name{
     top: -85px;
     position: relative;
-    margin-left: 50px;  
+    margin-left: 25px;  
 }
-
 #job{
     top: -105px;
     position: relative;
     margin-left: 40px;  
 }
-
 .descripcion {
     top: -10px;
     position: relative;
     margin-left: 80px;
     margin-right: 40px;
 }
-
-.box_acerca_de {
+.box_about {
     height: 150px;
     top: 10px;
     position: relative;
@@ -120,57 +109,176 @@ section, nav, footer {
     text-align: center;        
 }
 
-.box_experiencia {
-    position: relative;    
-    height: 375px;
-}
 
+
+.box_exp {
+    position: relative;    
+    height: 385px;
+}
 .subtitulos{
     position:relative;
     top:  10px;
-    left: 10px;    
+    left: 25px; 
 }
-
-.exp_info {
-    display: grid;
-    flex-direction: column;  
+.container {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    margin-top: 25px;
+    text-align: justify;  
     
 }
-
-.empresa_logo {
+.logo_sqr {
     position: relative;
     width: 95px;
     height: 95px;
-   
     background-size: cover; 
+    margin-left: 50px;
 }
-
-.sub_txt {
+.txt_ {
+    position: absolute; 
+    margin-right: 70px; 
+    margin-left: 195px;    
+    top: 25px;
+}
+#txt_1 {
     position: absolute;
-    flex-direction: column;
- 
-    
+    margin-right: 70px;  
+    margin-left: 195px; 
+    top: 140px;
+}
+#txt_2 {
+    position: absolute;
+    margin-right: 70px;  
+    margin-left: 195px;   
+    top: 255px; 
+}
+.container h5{
+    margin-bottom: 10px;   
+}
+.container p {
+    margin-top: 0px;
+    font-size: 13px;
 }
 
 
 
-
-
-.box_educacion {
-    position: relative; 
+.box_est {
+    height: 300px;
     
-    height: 375px;
+}
+.cursos {
+    margin-left: 45px;
+    margin-top: 15px;
+}
+.row {
+    position: relative;
+    text-align: justify;    
+}
+.column {
+    padding: 5px;
+    float: left;
+    width: 30%;
+    height: 120px;
+}
+.column h5 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+}
+.column p {
+    margin-top: 5px;
+    font-size: 13px;
+
 }
 
-.box_skills {
-    position: relative; 
+
+
+.box_skill {
+    
+    height: 200px;
+}
+
+.row_circle {
+    flex-direction: row; 
+}
+
+    
+   
+
+.circle-wrap {
+    margin: 25px auto;
+    width: 150px;
     height: 150px;
+    background: #fefcff;
+    border-radius: 50%;
+    border: 1px solid #e9c6d1;
+  }
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
 }
+
+.mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #D35755;
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+  }
+  
+.mask.full,
+.circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(135deg);
+}
+  
+@keyframes fill{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(135deg);
+    }
+}
+
+.circle-wrap .inside-circle {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background: #e9c6d1;
+    line-height: 120px;
+    text-align: center;
+    margin-top: 14px;
+    margin-left: 14px;
+    color: #D35755;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .box_proyectos{
     position: relative; 
     height: 400px;
-
 }
 
 nav {
@@ -179,13 +287,10 @@ nav {
     height: 40px;
     background-color: #D35755;
     justify-content: space-between;
-    
 }
 
 footer {
-   
     position: relative; 
-    
     height: 40px;
-    background-color: #D35755;
+    background-color: #ffd8d7;
 }
